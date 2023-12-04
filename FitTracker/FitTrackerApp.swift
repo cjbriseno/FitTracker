@@ -11,7 +11,7 @@ import SwiftUI
 struct FitTrackerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            UserLoginPage()
         }
     }
 }
