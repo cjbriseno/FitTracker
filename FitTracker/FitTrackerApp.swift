@@ -12,6 +12,7 @@ struct FitTrackerApp: App {
     var body: some Scene {
         WindowGroup {
             UserLoginPage()
+            UserDashboard()
         }
     }
 }
