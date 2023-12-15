@@ -55,12 +55,13 @@ struct UserLoginPage: View {
                 .cornerRadius(50)
                 .padding(.bottom, 75)
                 
-                NavigationLink(destination: CreateAccountPage()) {
-                    Text("Forgot Password?")
-                        .font(.system(.body, design: .monospaced))
-                        .padding(.bottom, 30)
-                        .underline()
-                }
+                //removed Forgot Password? link
+//                NavigationLink(destination: CreateAccountPage()) {
+//                    Text("Forgot Password?")
+//                        .font(.system(.body, design: .monospaced))
+//                        .padding(.bottom, 30)
+//                        .underline()
+//                }
                 
                 NavigationLink(destination: CreateAccountPage()) {
                     Text("Create Account")
