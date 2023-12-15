@@ -14,6 +14,7 @@
 		09CF01672B1D9A5F00866DAB /* FitTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CF01662B1D9A5F00866DAB /* FitTrackerTests.swift */; };
 		09CF01712B1D9A5F00866DAB /* FitTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CF01702B1D9A5F00866DAB /* FitTrackerUITests.swift */; };
 		09CF01732B1D9A5F00866DAB /* FitTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CF01722B1D9A5F00866DAB /* FitTrackerUITestsLaunchTests.swift */; };
+		3B0D2FF92B2C3F36004A718F /* FoodEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D2FF82B2C3F36004A718F /* FoodEntry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		09CF016C2B1D9A5F00866DAB /* FitTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09CF01702B1D9A5F00866DAB /* FitTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitTrackerUITests.swift; sourceTree = "<group>"; };
 		09CF01722B1D9A5F00866DAB /* FitTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3B0D2FF82B2C3F36004A718F /* FoodEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodEntry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				09CF01552B1D9A5E00866DAB /* FitTrackerApp.swift */,
 				09CF01572B1D9A5E00866DAB /* UserLoginPage.swift */,
+				3B0D2FF82B2C3F36004A718F /* FoodEntry.swift */,
 				09CF01592B1D9A5F00866DAB /* Assets.xcassets */,
 				09CF015B2B1D9A5F00866DAB /* Preview Content */,
 			);
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09CF01582B1D9A5E00866DAB /* UserLoginPage.swift in Sources */,
+				3B0D2FF92B2C3F36004A718F /* FoodEntry.swift in Sources */,
 				09CF01562B1D9A5E00866DAB /* FitTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

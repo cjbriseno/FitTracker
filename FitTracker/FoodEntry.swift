@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+
 struct PolygonBackground: View {
     var body: some View {
         GeometryReader { geometry in
@@ -28,10 +29,19 @@ struct PolygonBackground: View {
     }
 }
 
+
 struct FoodDiary: View {
     @State private var searchQuery = ""
     @State private var foodItems: [FoodItem] = []
-    @State private var diary: [FoodItem] = []
+    @AppStorage("diary") private var diaryData: Data = Data()
+    private var diary: [FoodItem] {
+        do {
+            let decoder = JSONDecoder()
+            return try decoder.decode([FoodItem].self, from: diaryData)
+        } catch {
+            return []
+        }
+    }
     
     var body: some View {
         NavigationView {
@@ -105,7 +115,7 @@ struct FoodDiary: View {
                         .foregroundColor(.white)
                     
                     List {
-                        ForEach(diary, id: \.self) { item in
+                        ForEach(diary, id: \.name) { item in
                             HStack {
                                 Text(item.name)
                                     .foregroundColor(.black)
@@ -130,16 +140,55 @@ struct FoodDiary: View {
             .edgesIgnoringSafeArea(.all)
         }
     }
+    func addToDiary(_ item: FoodItem) {
+        var updatedDiary = diary
+        updatedDiary.append(item)
+        
+        do {
+            let encoder = JSONEncoder()
+            let encodedData = try encoder.encode(updatedDiary)
+            
+            // Update the AppStorage
+            diaryData = encodedData
+        } catch {
+            print("Error encoding data: \(error)")
+        }
+    }
+    
+    // Function to remove an item from the diary
     func removeFromDiary(_ item: FoodItem) {
-            if let index = diary.firstIndex(of: item) {
-                diary.remove(at: index)
+        var updatedDiary = diary
+        
+        if let index = updatedDiary.firstIndex(of: item) {
+            updatedDiary.remove(at: index)
+            
+            do {
+                let encoder = JSONEncoder()
+                let encodedData = try encoder.encode(updatedDiary)
+                
+                // Update the AppStorage
+                diaryData = encodedData
+            } catch {
+                print("Error encoding data: \(error)")
             }
         }
-
-        func deleteDiaryItem(at offsets: IndexSet) {
-            diary.remove(atOffsets: offsets)
+    }
+    func deleteDiaryItem(at offsets: IndexSet) {
+        var updatedDiary = diary
+        
+        // Remove items at specified offsets
+        updatedDiary.remove(atOffsets: offsets)
+        
+        do {
+            let encoder = JSONEncoder()
+            let encodedData = try encoder.encode(updatedDiary)
+            
+            // Update the AppStorage
+            diaryData = encodedData
+        } catch {
+            print("Error encoding data: \(error)")
         }
-    
+    }
     func searchFoodItems() {
         let query = searchQuery.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         let url = URL(string: "https://api.calorieninjas.com/v1/nutrition?query=" + (query ?? ""))!
@@ -147,28 +196,25 @@ struct FoodDiary: View {
         request.setValue("wtZEiCiiOriIhEttYylLgA==18UEpZhommGp0ahW", forHTTPHeaderField: "X-Api-Key")
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                guard let data = data else { return }
-                do {
-                    // Print the raw JSON response
-                    let jsonString = String(data: data, encoding: .utf8)
-                    print("JSON Response: \(jsonString ?? "")")
-
-                    let decoder = JSONDecoder()
-                    let result = try decoder.decode(SearchResult.self, from: data)
-                    DispatchQueue.main.async {
-                        self.foodItems = result.items
-                    }
-                } catch {
-                    print("Error decoding JSON: \(error)")
+            guard let data = data else { return }
+            do {
+                // Print the raw JSON response
+                let jsonString = String(data: data, encoding: .utf8)
+                print("JSON Response: \(jsonString ?? "")")
+                
+                let decoder = JSONDecoder()
+                let result = try decoder.decode(SearchResult.self, from: data)
+                DispatchQueue.main.async {
+                    self.foodItems = result.items
                 }
+            } catch {
+                print("Error decoding JSON: \(error)")
             }
-            task.resume()
-    }
-    
-    func addToDiary(_ item: FoodItem) {
-        diary.append(item)
+        }
+        task.resume()
     }
 }
+    
 
 struct FoodDiary_Previews: PreviewProvider {
     static var previews: some View {

@@ -11,7 +11,8 @@ import SwiftUI
 struct FitTrackerApp: App {
     var body: some Scene {
         WindowGroup {
-            UserLoginPage()
+           // UserLoginPage()  change this line to test new screens
+            FoodDiary()
         }
     }
 }
