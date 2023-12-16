@@ -1,26 +1,6 @@
 import Foundation
 import SwiftUI
 
-struct PolygonBackground: View {
-    var body: some View {
-        GeometryReader { geometry in
-            Path { path in
-                path.move(to: CGPoint(x: 0, y: 0))
-                path.addLine(to: CGPoint(x: geometry.size.width, y: 0))
-                path.addLine(to: CGPoint(x: geometry.size.width, y: geometry.size.height))
-                path.addLine(to: CGPoint(x: 0, y: geometry.size.height))
-            }
-            .fill(LinearGradient(
-                gradient: Gradient(colors: [Color(red: 0.16, green: 0.45, blue: 0.44),
-                                            Color(red: 0.96, green: 0.64, blue: 0.38)]), // Blue
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            ))
-
-        }
-    }
-}
-
 struct FoodDiary: View {
     @State private var searchQuery = ""
     @State private var foodItems: [FoodItem] = []
