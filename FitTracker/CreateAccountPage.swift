@@ -1,3 +1,11 @@
+//
+//  CreateAccountPage.swift
+//  FitTracker
+//
+//  Created by the FitTracker Team
+//
+// 
+
 import Foundation
 import SwiftUI
 

@@ -2,7 +2,7 @@
 //  UserDashboard.swift
 //  FitTracker
 //
-//  Created by Cris Briseno on 12/3/23.
+//  Created by the FitTracker Team
 //
 
 import SwiftUI
