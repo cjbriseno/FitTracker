@@ -1,13 +1,5 @@
-//
-//  Bryan's_Stuff.swift
-//  FitTracker
-//
-//  Created by Oscar Hernandez on 12/10/23.
-//
-
 import Foundation
 import SwiftUI
-
 
 struct PolygonBackground: View {
     var body: some View {
@@ -28,7 +20,6 @@ struct PolygonBackground: View {
         }
     }
 }
-
 
 struct FoodDiary: View {
     @State private var searchQuery = ""
