@@ -1,4 +1,4 @@
-# Project Title
+# FitTracker Application
 Authors:
 1. Cristopher Briseno (cbriseno@csu.fullerton.edu)
 2. Oscar Hernandez (oscar.hernandez90@csu.fullerton.edu)
