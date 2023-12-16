@@ -2,7 +2,7 @@
 //  UserLoginPage.swift
 //  FitTracker
 //
-//  Created by Cris Briseno on 12/3/23.
+//  Created by The FitTracker Team
 //
 
 import SwiftUI

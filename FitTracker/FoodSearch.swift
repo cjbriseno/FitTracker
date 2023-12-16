@@ -1,19 +1,18 @@
 //
-//  Bryan's_Stuff.swift
+//  FoodEntry.swift
 //  FitTracker
 //
-//  Created by Oscar Hernandez on 12/10/23.
+//  Created by The FitTracker Team
 //
-
 
 import Foundation
 import SwiftUI
 
 struct FoodSearch: View {
-    @State private var searchQuery = ""
-    @State private var foodItems: [FoodItem] = []
+    @State internal var searchQuery = ""
+    @State internal var foodItems: [FoodItem] = []
     @AppStorage("diary") private var diaryData: Data = Data()
-    private var diary: [FoodItem] {
+    internal var diary: [FoodItem] {
         do {
             let decoder = JSONDecoder()
             return try decoder.decode([FoodItem].self, from: diaryData)

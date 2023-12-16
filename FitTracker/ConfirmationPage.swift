@@ -2,9 +2,9 @@
 //  ConfirmationPage.swift
 //  FitTracker
 //
-//  Created by Oscar Hernandez on 12/7/23.
+//  Created by the FitTracker Team
 //
-// ConfirmationView.swift
+// 
 import Foundation
 import SwiftUI
 

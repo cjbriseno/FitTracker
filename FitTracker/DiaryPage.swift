@@ -2,7 +2,7 @@
 //  DiaryPage.swift
 //  FitTracker
 //
-//  Created by Oscar Hernandez on 12/15/23.
+//  Created by the FitTracker Team
 //
 
 import Foundation

@@ -9,26 +9,19 @@
 /* Begin PBXBuildFile section */
 		09CF015A2B1D9A5F00866DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09CF01592B1D9A5F00866DAB /* Assets.xcassets */; };
 		09CF015D2B1D9A5F00866DAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09CF015C2B1D9A5F00866DAB /* Preview Assets.xcassets */; };
-		09CF01672B1D9A5F00866DAB /* FitTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CF01662B1D9A5F00866DAB /* FitTrackerTests.swift */; };
-		09CF01712B1D9A5F00866DAB /* FitTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CF01702B1D9A5F00866DAB /* FitTrackerUITests.swift */; };
-		09CF01732B1D9A5F00866DAB /* FitTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CF01722B1D9A5F00866DAB /* FitTrackerUITestsLaunchTests.swift */; };
 		09DBB77E2B2CCEDC0021A3E8 /* FitTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DBB77D2B2CCEDC0021A3E8 /* FitTrackerApp.swift */; };
 		09DBB7802B2CD2C00021A3E8 /* ConfirmationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DBB77F2B2CD2C00021A3E8 /* ConfirmationPage.swift */; };
 		09DBB7822B2CD2C30021A3E8 /* CreateAccountPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DBB7812B2CD2C30021A3E8 /* CreateAccountPage.swift */; };
-		09DBB7842B2CD2C60021A3E8 /* FoodEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DBB7832B2CD2C60021A3E8 /* FoodEntry.swift */; };
+		09DBB7842B2CD2C60021A3E8 /* FoodSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DBB7832B2CD2C60021A3E8 /* FoodSearch.swift */; };
 		09DBB7862B2CD2C80021A3E8 /* UserDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DBB7852B2CD2C80021A3E8 /* UserDashboard.swift */; };
 		09DBB7882B2CD2CA0021A3E8 /* UserLoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DBB7872B2CD2CA0021A3E8 /* UserLoginPage.swift */; };
+		55547D8E2B2D5EA500FD938E /* DiaryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55547D8D2B2D5EA500FD938E /* DiaryPage.swift */; };
+		55547D922B2D60B000FD938E /* FoodSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55547D912B2D60B000FD938E /* FoodSearchTests.swift */; };
+		55547D932B2D620900FD938E /* FoodSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DBB7832B2CD2C60021A3E8 /* FoodSearch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		09CF01632B1D9A5F00866DAB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 09CF014A2B1D9A5E00866DAB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 09CF01512B1D9A5E00866DAB;
-			remoteInfo = FitTracker;
-		};
-		09CF016D2B1D9A5F00866DAB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 09CF014A2B1D9A5E00866DAB /* Project object */;
 			proxyType = 1;
@@ -42,16 +35,14 @@
 		09CF01592B1D9A5F00866DAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09CF015C2B1D9A5F00866DAB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		09CF01622B1D9A5F00866DAB /* FitTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		09CF01662B1D9A5F00866DAB /* FitTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitTrackerTests.swift; sourceTree = "<group>"; };
-		09CF016C2B1D9A5F00866DAB /* FitTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		09CF01702B1D9A5F00866DAB /* FitTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitTrackerUITests.swift; sourceTree = "<group>"; };
-		09CF01722B1D9A5F00866DAB /* FitTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		09DBB77D2B2CCEDC0021A3E8 /* FitTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitTrackerApp.swift; sourceTree = "<group>"; };
 		09DBB77F2B2CD2C00021A3E8 /* ConfirmationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationPage.swift; sourceTree = "<group>"; };
 		09DBB7812B2CD2C30021A3E8 /* CreateAccountPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountPage.swift; sourceTree = "<group>"; };
-		09DBB7832B2CD2C60021A3E8 /* FoodEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodEntry.swift; sourceTree = "<group>"; };
+		09DBB7832B2CD2C60021A3E8 /* FoodSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearch.swift; sourceTree = "<group>"; };
 		09DBB7852B2CD2C80021A3E8 /* UserDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDashboard.swift; sourceTree = "<group>"; };
 		09DBB7872B2CD2CA0021A3E8 /* UserLoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginPage.swift; sourceTree = "<group>"; };
+		55547D8D2B2D5EA500FD938E /* DiaryPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryPage.swift; sourceTree = "<group>"; };
+		55547D912B2D60B000FD938E /* FoodSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,13 +60,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		09CF01692B1D9A5F00866DAB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -84,7 +68,6 @@
 			children = (
 				09CF01542B1D9A5E00866DAB /* FitTracker */,
 				09CF01652B1D9A5F00866DAB /* FitTrackerTests */,
-				09CF016F2B1D9A5F00866DAB /* FitTrackerUITests */,
 				09CF01532B1D9A5E00866DAB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,7 +77,6 @@
 			children = (
 				09CF01522B1D9A5E00866DAB /* FitTracker.app */,
 				09CF01622B1D9A5F00866DAB /* FitTrackerTests.xctest */,
-				09CF016C2B1D9A5F00866DAB /* FitTrackerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,9 +85,10 @@
 			isa = PBXGroup;
 			children = (
 				09DBB77D2B2CCEDC0021A3E8 /* FitTrackerApp.swift */,
+				55547D8D2B2D5EA500FD938E /* DiaryPage.swift */,
 				09DBB77F2B2CD2C00021A3E8 /* ConfirmationPage.swift */,
 				09DBB7812B2CD2C30021A3E8 /* CreateAccountPage.swift */,
-				09DBB7832B2CD2C60021A3E8 /* FoodEntry.swift */,
+				09DBB7832B2CD2C60021A3E8 /* FoodSearch.swift */,
 				09DBB7852B2CD2C80021A3E8 /* UserDashboard.swift */,
 				09DBB7872B2CD2CA0021A3E8 /* UserLoginPage.swift */,
 				09CF01592B1D9A5F00866DAB /* Assets.xcassets */,
@@ -125,18 +108,9 @@
 		09CF01652B1D9A5F00866DAB /* FitTrackerTests */ = {
 			isa = PBXGroup;
 			children = (
-				09CF01662B1D9A5F00866DAB /* FitTrackerTests.swift */,
+				55547D912B2D60B000FD938E /* FoodSearchTests.swift */,
 			);
 			path = FitTrackerTests;
-			sourceTree = "<group>";
-		};
-		09CF016F2B1D9A5F00866DAB /* FitTrackerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				09CF01702B1D9A5F00866DAB /* FitTrackerUITests.swift */,
-				09CF01722B1D9A5F00866DAB /* FitTrackerUITestsLaunchTests.swift */,
-			);
-			path = FitTrackerUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,24 +151,6 @@
 			productReference = 09CF01622B1D9A5F00866DAB /* FitTrackerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		09CF016B2B1D9A5F00866DAB /* FitTrackerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 09CF017C2B1D9A5F00866DAB /* Build configuration list for PBXNativeTarget "FitTrackerUITests" */;
-			buildPhases = (
-				09CF01682B1D9A5F00866DAB /* Sources */,
-				09CF01692B1D9A5F00866DAB /* Frameworks */,
-				09CF016A2B1D9A5F00866DAB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				09CF016E2B1D9A5F00866DAB /* PBXTargetDependency */,
-			);
-			name = FitTrackerUITests;
-			productName = FitTrackerUITests;
-			productReference = 09CF016C2B1D9A5F00866DAB /* FitTrackerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -209,10 +165,6 @@
 						CreatedOnToolsVersion = 15.0.1;
 					};
 					09CF01612B1D9A5F00866DAB = {
-						CreatedOnToolsVersion = 15.0.1;
-						TestTargetID = 09CF01512B1D9A5E00866DAB;
-					};
-					09CF016B2B1D9A5F00866DAB = {
 						CreatedOnToolsVersion = 15.0.1;
 						TestTargetID = 09CF01512B1D9A5E00866DAB;
 					};
@@ -233,7 +185,6 @@
 			targets = (
 				09CF01512B1D9A5E00866DAB /* FitTracker */,
 				09CF01612B1D9A5F00866DAB /* FitTrackerTests */,
-				09CF016B2B1D9A5F00866DAB /* FitTrackerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -255,13 +206,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		09CF016A2B1D9A5F00866DAB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -269,12 +213,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09DBB7842B2CD2C60021A3E8 /* FoodEntry.swift in Sources */,
+				09DBB7842B2CD2C60021A3E8 /* FoodSearch.swift in Sources */,
 				09DBB77E2B2CCEDC0021A3E8 /* FitTrackerApp.swift in Sources */,
 				09DBB7802B2CD2C00021A3E8 /* ConfirmationPage.swift in Sources */,
 				09DBB7882B2CD2CA0021A3E8 /* UserLoginPage.swift in Sources */,
 				09DBB7822B2CD2C30021A3E8 /* CreateAccountPage.swift in Sources */,
 				09DBB7862B2CD2C80021A3E8 /* UserDashboard.swift in Sources */,
+				55547D8E2B2D5EA500FD938E /* DiaryPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,16 +227,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09CF01672B1D9A5F00866DAB /* FitTrackerTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		09CF01682B1D9A5F00866DAB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				09CF01712B1D9A5F00866DAB /* FitTrackerUITests.swift in Sources */,
-				09CF01732B1D9A5F00866DAB /* FitTrackerUITestsLaunchTests.swift in Sources */,
+				55547D932B2D620900FD938E /* FoodSearch.swift in Sources */,
+				55547D922B2D60B000FD938E /* FoodSearchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,11 +239,6 @@
 			isa = PBXTargetDependency;
 			target = 09CF01512B1D9A5E00866DAB /* FitTracker */;
 			targetProxy = 09CF01632B1D9A5F00866DAB /* PBXContainerItemProxy */;
-		};
-		09CF016E2B1D9A5F00866DAB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 09CF01512B1D9A5E00866DAB /* FitTracker */;
-			targetProxy = 09CF016D2B1D9A5F00866DAB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -526,40 +458,6 @@
 			};
 			name = Release;
 		};
-		09CF017D2B1D9A5F00866DAB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Swifties.FitTrackerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FitTracker;
-			};
-			name = Debug;
-		};
-		09CF017E2B1D9A5F00866DAB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Swifties.FitTrackerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FitTracker;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -586,15 +484,6 @@
 			buildConfigurations = (
 				09CF017A2B1D9A5F00866DAB /* Debug */,
 				09CF017B2B1D9A5F00866DAB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		09CF017C2B1D9A5F00866DAB /* Build configuration list for PBXNativeTarget "FitTrackerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				09CF017D2B1D9A5F00866DAB /* Debug */,
-				09CF017E2B1D9A5F00866DAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
