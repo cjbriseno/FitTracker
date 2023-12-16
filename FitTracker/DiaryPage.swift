@@ -1,10 +1,13 @@
 //  DiaryPage.swift
 //  FitTracker
+// Bryan Medina
 import Foundation
 import SwiftUI
 
 struct FoodDiaryListView: View {
     @AppStorage("diary") private var diaryData: Data = Data()
+    @AppStorage("totalCalories") private var totalCalories: Double = 0.0
+
     private var diary: [FoodItem] {
         do {
             let decoder = JSONDecoder()
@@ -12,6 +15,10 @@ struct FoodDiaryListView: View {
         } catch {
             return []
         }
+    }
+
+    private var calculatedTotalCalories: Double {
+        diary.reduce(0.0) { $0 + Double($1.calories) }
     }
 
     var body: some View {
@@ -37,7 +44,16 @@ struct FoodDiaryListView: View {
             }
             .listStyle(InsetListStyle())
             .navigationBarTitle("Food Diary", displayMode: .inline)
+            .onAppear {
+                updateTotalCalories()
+            }
         }
+    }
+
+    private func updateTotalCalories() {
+        print("Total calories are: ", totalCalories)
+        totalCalories = calculatedTotalCalories
+        
     }
 }
 
