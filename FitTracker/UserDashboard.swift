@@ -43,54 +43,61 @@ struct CircularProgressBar: View {
 struct UserDashboard: View {
     @State private var loggedCalories: Double = 1000
     let goalCalories: Double = 3000
-    @State private var loggedProtien: Double = 100
+    @State private var loggedProtien: Double = 75
     let goalProtien: Double = 200
-    
+    @State private var totalCalories: Double = 0.0  // Add a state variable to hold totalCalories
+
     var body: some View {
-        ZStack {
-            Blue.edgesIgnoringSafeArea(.all)
-            
-            VStack(alignment: .center, spacing: 20) {
-                CircularProgressBar(progress: loggedCalories / goalCalories)
-                    .frame(width: 150, height: 150)
-                Text("Calories")
-                    .foregroundColor(.white)
-                
-                CircularProgressBar(progress: loggedProtien / goalProtien)
-                    .frame(width: 150, height: 150)
-                Text("Protien")
-                    .foregroundColor(.white)
-                
-                    .padding(.bottom, 50)
-                
-                // button to log food
-                Button(action: {}) {
-                    Text("Log Food")
-                        .font(.system(.title))
-                        .fontWeight(.semibold)
-                        .foregroundColor(Color.white)
-                        .frame(width: 150, height: 50)
+        NavigationView {
+            ZStack {
+                Blue.edgesIgnoringSafeArea(.all)
+
+                VStack(alignment: .center, spacing: 20) {
+                    CircularProgressBar(progress: totalCalories / goalCalories) // Update progress using totalCalories
+                        .frame(width: 150, height: 150)
+                    Text("Calories")
+                        .foregroundColor(.white)
+
+                    CircularProgressBar(progress: loggedProtien / goalProtien)
+                        .frame(width: 150, height: 150)
+                    Text("Protein")
+                        .foregroundColor(.white)
+                        .padding(.bottom, 50)
+
+                    // NavigationLink to FoodSearch
+                    NavigationLink(destination: FoodSearch()) {
+                        Text("Log Food")
+                            .font(.system(.title))
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color.white)
+                            .frame(width: 150, height: 50)
+                    }
+                    .background(Color(Orange))
+                    .cornerRadius(50)
+                    .padding(.bottom, 75)
+
+                    // NavigationLink to FoodDiaryListView
+                    NavigationLink(destination: FoodDiaryListView(totalCalories: $totalCalories)) {
+                        Text("Diary")
+                            .font(.system(.title))
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color.white)
+                            .frame(width: 150, height: 50)
+                    }
+                    .background(Color(Orange))
+                    .cornerRadius(50)
+                    .padding(.bottom, 75)
                 }
-                .background(Color(Orange))
-                .cornerRadius(50)
-                .padding(.bottom, 75)
-                
-                // to diary
-                Button(action: {}) {
-                    Text("Diary")
-                        .font(.system(.title))
-                        .fontWeight(.semibold)
-                        .foregroundColor(Color.white)
-                        .frame(width: 150, height: 50)
-                }
-                .background(Color(Orange))
-                .cornerRadius(50)
-                .padding(.bottom, 75)
-                
+            }
+            .onAppear {
+                // Update loggedCalories with the value of totalCalories
+                loggedCalories = totalCalories
             }
         }
     }
 }
+
+
 
 #Preview {
     UserDashboard()

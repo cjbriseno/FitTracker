@@ -1,7 +1,15 @@
+//
+//  Bryan's_Stuff.swift
+//  FitTracker
+//
+//  Created by Oscar Hernandez on 12/10/23.
+//
+
+
 import Foundation
 import SwiftUI
 
-struct FoodDiary: View {
+struct FoodSearch: View {
     @State private var searchQuery = ""
     @State private var foodItems: [FoodItem] = []
     @AppStorage("diary") private var diaryData: Data = Data()
@@ -189,7 +197,7 @@ struct FoodDiary: View {
 
 struct FoodDiary_Previews: PreviewProvider {
     static var previews: some View {
-        FoodDiary()
+        FoodSearch()
     }
 }
 
